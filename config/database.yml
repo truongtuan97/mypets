@@ -20,7 +20,8 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-
+  port: 5432
+  
 development:
   <<: *default
   database: mypets_development
@@ -41,7 +42,6 @@ development:
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
-  port: 5432
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
@@ -82,4 +82,4 @@ production:
   <<: *default
   database: mypets_production
   username: mypets
-  password: <%= ENV['MYPETS_DATABASE_PASSWORD'] %>
+  password: 12345678 #<%= ENV['MYPETS_DATABASE_PASSWORD'] %>
